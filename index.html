@@ -13,8 +13,8 @@
     <div class="jumbotron">
       <h1>Cassie's Pizza Delivery</h1>
     </div>
-    <div class = "customerInfo row">
-      <form id = "createPizza">
+    <form id = "getInformation">
+      <div class = "customerInfo row">
         <div class="col-md-6">
           <div class="form-group">
             <label for="customerName">Please Enter Your Name:</label>
@@ -32,6 +32,8 @@
           <button type=submit name=button class="btn btn-primary">Submit!</button>
         </div>
       </div>
+    </form>
+    <form id= "createPizza">
       <div class="buildPizza row">
         <div class="pizzaSize col-md-6">
           <h2>Choose a Pizza Size:</h2>
@@ -44,6 +46,16 @@
         </div>
         <div class="pizzaToppings col-md-6">
           <h2>Choose Your Pizza Toppings: ($1.00 each)</h2>
+          <input type="checkbox" name="toppings" value="garlic">Roasted Garlic<br>
+          <input type="checkbox" name="toppings" value="spinach">Spinach<br>
+          <input type="checkbox" name="toppings" value="bell peppers">Bell Peppers<br>
+          <input type="checkbox" name="toppings" value="extra cheese">Extra Cheese<br>
+          <input type="checkbox" name="toppings" value="pineapple">Pineapple<br>
+          <input type="checkbox" name="toppings" value="jalapenos">Jalapenos<br>
+          <input type="checkbox" name="toppings" value="tomatoes">Sun Dried Tomatoes<br>
+          <input type="checkbox" name="toppings" value="mushrooms">Mushrooms<br>
+          <input type="checkbox" name="toppings" value="olives">Olives<br>
+          <input type="checkbox" name="toppings" value="onions">Onions<br>
           <button type="submit" name="button" class="btn btn-primary">Finished!</button>
         </div>
       </div>
