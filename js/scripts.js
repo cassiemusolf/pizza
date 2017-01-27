@@ -37,20 +37,17 @@ $(document).ready(function(){
   $("form#createPizza").submit(function(event){
     event.preventDefault();
 
-var nameInput = $("input#customerName").val();
-$("span#name").text(nameInput + ", ");
-var crustSize = $(('input[name="size"]:checked')).val();
-// var toppings = $('input:checkbox[name="toppings"]:checked').len();
-var pizzaOne = new Pizza(toppings, crustSize);
-toppings = $('input[name=toppings]:checked').val();
-
-  var totalToppings = [];
-  $(':checkbox:checked.pizzaToppings').each(function() {
+    var nameInput = $("input#customerName").val();
+    var crustSize = $(('input[name="size"]:checked')).val();
+    var pizzaOne = new Pizza(toppings, crustSize);
+    toppings = $('input[name=toppings]:checked').val();
+    var totalToppings = [];
+    $(':checkbox:checked.pizzaToppings').each(function() {
       total += +this.value;
-  totalToppings.push(total);
-  $(alert(totalToppings.length));
-});
+      alert("hi");
+    });
 
-$("span#finalPrice").text("Your total is: $" + pizzaOne.price() + ".00");
-});
+    $("span#name").text(nameInput + ", ");
+    $("span#finalPrice").text("Your total is: $" + pizzaOne.price() + ".00");
+  });
 });

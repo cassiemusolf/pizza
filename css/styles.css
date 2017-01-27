@@ -1,6 +1,10 @@
 .container {
-  font-family: cursive;
+  font-family: monospace;
   margin-bottom: 50px;
+}
+
+body {
+  background-color: #ebf9e8;
 }
 
 .jumbotron {
@@ -16,6 +20,22 @@
 
 input[type="radio"], input[type="checkbox"] {
   margin: 10px 10px 10px 10px;
+}
+
+#getInformation {
+  font-size: 20px;
+}
+
+.pizzaToppings {
+  font-size: 20px;
+}
+
+.pizzaSize {
+  font-size: 20px;
+}
+
+h2 {
+  color: purple;
 }
 
 button {
