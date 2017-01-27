@@ -1,7 +1,18 @@
+.container {
+  font-family: cursive;
+}
+
 .jumbotron {
   margin-top: 40px;
   text-align: center;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/736x/c7/68/b0/c768b027a28cb851673562965e14ea24.jpg");
+  background-position: absolute;
+  /*opacity: 0.7;*/
+  font-size: 100px;
+  font-weight: bolder black;
 }
+
+
 
 input[type="radio"], input[type="checkbox"] {
   margin: 10px 10px 10px 10px;
@@ -11,6 +22,6 @@ button {
   margin-top: 10px;
 }
 
-/*.buildPizza {
-  display: none;
-}*/
+.customerInfo {
+  margin-bottom: 100px;
+}
