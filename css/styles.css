@@ -1,5 +1,5 @@
 .container {
-  font-family: monospace;
+  font-family: 'Arsenal', sans-serif;
   margin-bottom: 50px;
 }
 
@@ -25,10 +25,10 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 #getInformation {
-  font-size: 20px;
+  font-size: 30px;
 }
 
-.pizzaToppings, .pizzaSize {
+.pizzaToppings, .pizzaSize, .deliverOrPickup {
   font-size: 20px;
 }
 
@@ -36,7 +36,7 @@ h2 {
   color: purple;
 }
 
-button {
+.btn {
   margin-top: 20px;
   margin-left: 30px;
 }
@@ -46,8 +46,8 @@ button {
 }
 
 h3 {
-  font-size: 20px;
-  color: purple;
+  font-size: 30px;
+  color: red;
 }
 
 #reviewOrder {
@@ -56,8 +56,12 @@ h3 {
 
 #delivery {
   display: none;
+  font-size: 30px;
+  color: red;
 }
 
 #pick-up {
   display: none;
+  font-size: 30px;
+  color: red;
 }
