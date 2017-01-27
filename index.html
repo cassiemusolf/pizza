@@ -13,33 +13,41 @@
     <div class="jumbotron">
       <h1>Cassie's Pizza Delivery</h1>
     </div>
-    <form id = "createPizza">
-      <div class="form-group">
-        <label for="customerName">Please Enter Your Name:</label>
-        <input id="customerName" class="form-control" type="text">
+    <div class = "customerInfo row">
+      <form id = "createPizza">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="customerName">Please Enter Your Name:</label>
+            <input id="customerName" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="customerAddress">Please Enter Your Address:</label>
+            <input id="customerAddress" class="form-control" type="text">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>How Would You Like to Receive Your Pizza?</h2>
+          <input type="radio" name="getYourPizza" value="delivery">Delivery<br>
+          <input type="radio" name="getYourPizza" value="pick-up">Store Pick-Up<br>
+          <button type=submit name=button class="btn btn-primary">Submit!</button>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="customerAddress">Please Enter Your Address:</label>
-        <input id="customerAddress" class="form-control" type="text">
+      <div class="buildPizza row">
+        <div class="pizzaSize col-md-6">
+          <h2>Choose a Pizza Size:</h2>
+          <input type="radio" name="size" value="personal">Personal (8 inch)<br>
+          <input type="radio" name="size" value="small">Small (10 inch)<br>
+          <input type="radio" name="size" value="medium">Medium (12 inch)<br>
+          <input type="radio" name="size" value="large">Large (14 inch)<br>
+          <input type="radio" name="size" value="extra-large">Extra-Large (16 inch)<br>
+          <button type="submit" name="button" class="btn btn-primary">Choose your size!</button>
+        </div>
+        <div class="pizzaToppings col-md-6">
+          <h2>Choose Your Pizza Toppings: ($1.00 each)</h2>
+          <button type="submit" name="button" class="btn btn-primary">Finished!</button>
+        </div>
       </div>
-    <button type=submit name=button class="btn btn-primary">Submit!</button>
-    <div class="row">
-      <div class="pizzaSize col-md-6">
-        <h2>Choose a Pizza Size:</h2>
-        <input type="radio" name="size" value="personal">Personal (8 inch)<br>
-        <input type="radio" name="size" value="small">Small (10 inch)<br>
-        <input type="radio" name="size" value="medium">Medium (12 inch)<br>
-        <input type="radio" name="size" value="large">Large (14 inch)<br>
-        <input type="radio" name="size" value="extra large">Extra-Large (16 inch)<br>
-        <button type="submit" name="button" class="btn btn-primary">Choose your size!</button>
-      </div>
-      <div class="pizzaToppings col-md-6">
-        <h2>Choose Your Pizza Toppings: ($1.00 each)</h2>
-        <button type="submit" name="button" class="btn btn-primary">Finished!</button>
-      </div>
-    </div>
     </form>
-    </div>
-
-  </body>
-  </html>
+  </div>
+</body>
+</html>
