@@ -1,5 +1,5 @@
 //business logic
-var toppings;
+
 function Pizza(toppings, crustSize) {
   this.toppings = toppings;
   this.crustSize = crustSize;
@@ -7,8 +7,8 @@ function Pizza(toppings, crustSize) {
 
 Pizza.prototype.price = function() {
   var defaultPrice = 10.00;
-  if (this.crustSize === "personal") {
-    return defaultPrice;
+  if (this.crustSize === "personal" ) {
+    return defaultPrice -1;
   } else if (this.crustSize === "small") {
     return defaultPrice +2;
   } else if (this.crustSize === "medium") {
@@ -20,38 +20,36 @@ Pizza.prototype.price = function() {
   }
 }
 
-// Pizza.prototype.toppingsTotal = function() {
-//   var defaultToppings = 0.00;
-//   if (this.toppings === "Regular") {
-//     return defaultToppings +1;
-//   }  else if (this.toppings ===2) {
-//       return defaultToppings +2;
-//    }
-// }
-
+  // Pizza.prototype.calculateToppings = function () {
+  //   if (this.toppings === "pineapple") {
+  //     alert("finally");
+  //   } else if (this.toppings === 2) {
+  //     return defaultToppings +2;
+  //   }
+  // };
 
 
 //front-end logic
 
-$(document).ready(function(){
-  $("form#createPizza").submit(function(event){
+$(document).ready(function() {
+  $("form#all").submit(function(event) {
     event.preventDefault();
 
+    var toppings = $('input:checkbox[name="toppings"]:checked').val();
+    var receivePizza = $(('input[name="getYourPizza"]:checked')).val();
     var nameInput = $("input#customerName").val();
+    var addressInput = $("input#customerAddress").val();
     var crustSize = $(('input[name="size"]:checked')).val();
-    var pizzaOne = new Pizza(toppings, crustSize);
-    toppings = $('input[name=toppings]:checked').val();
-    // var totalToppings = [];
-    // $(':checkbox:checked.pizzaToppings').each(function() {
-    //   total += +this.value;
-    //   alert("hi");
-    // });
-    var checkboxArray = [];
-    $(".pizzaToppings:checked").each(function(){
-      checkboxArray.push(this.value);
-    });
+    var yourPizza = new Pizza(toppings, crustSize);
+
+    if (receivePizza === "delivery") {
+      $("span#delivery").show();
+      $("span#address").text(addressInput);
+    } else if (receivePizza === "pick-up") {
+      $("span#pick-up").show();
+    }
 
     $("span#name").text(nameInput + ", ");
-    $("span#finalPrice").text("Your total is: $" + pizzaOne.price() + ".00" + checkboxArray);
+    $("span#finalPrice").text("Your total is: $" + yourPizza.price() + ".00");
   });
 });

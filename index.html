@@ -14,7 +14,7 @@
     <div class="jumbotron">
       <h1>The Veggie Pizzeria</h1>
     </div>
-    <form id = "getInformation">
+    <form id = "all">
       <div class = "customerInfo row">
         <div class="col-md-6">
           <div class="form-group">
@@ -32,10 +32,8 @@
           <input type="radio" name="getYourPizza" value="pick-up">Store Pick-Up<br>
         </div>
       </div>
-    </form>
-    <form id= "createPizza">
       <div class="buildPizza row">
-        <div class="pizzaSize col-md-6">
+        <div class="form-group pizzaSize col-md-6">
           <h2>Choose a Pizza Size:</h2>
           <input type="radio" name="size" value="personal">Personal -- 8 inch ($9.00)<br>
           <input type="radio" name="size" value="small">Small -- 10 inch ($12.00)<br>
@@ -43,9 +41,9 @@
           <input type="radio" name="size" value="large">Large -- 14 inch ($16.00)<br>
           <input type="radio" name="size" value="extra-large">Extra Large -- 16 inch ($18.00)<br>
         </div>
-        <div class="pizzaToppings col-md-6">
+        <div class="form-group pizzaToppings col-md-6">
           <h2>Choose Your Pizza Toppings: ($1.00 each)</h2>
-          <input type="checkbox" name="toppings" value="1">Pineapple<br>
+          <input type="checkbox" name="toppings" value="pineapple">Pineapple<br>
           <input type="checkbox" name="toppings" value="1">Spinach<br>
           <input type="checkbox" name="toppings" value="1">Roasted Red Peppers<br>
           <input type="checkbox" name="toppings" value="1">Sun-Dried Tomatoes<br>
@@ -59,8 +57,12 @@
         </div>
       </form>
       </div>
-
-    <h3><span id="name"></span><span id="finalPrice"></span></h3>
+    <div class="results">
+      <h3><span id="name"></span><span id="finalPrice"></span></h3>
+      <h2><span id=reviewOrder>Review your order: Your toppings are</span></h2>
+      <span id="delivery">Your pizza will be delivered to <span id="address"></span> in 45 minutes!</span>
+      <span id="pick-up">You can pick up your pizza in 30 minutes!</span>
+    </div>
   </div>
 </body>
 </html>

@@ -49,3 +49,15 @@ h3 {
   font-size: 20px;
   color: purple;
 }
+
+#reviewOrder {
+  display: none;
+}
+
+#delivery {
+  display: none;
+}
+
+#pick-up {
+  display: none;
+}
