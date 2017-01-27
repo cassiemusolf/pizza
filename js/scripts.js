@@ -1,12 +1,24 @@
 //business logic
 
-function Pizza(size, toppings) {
-  this.size = size;
+function Pizza(toppings, crustSize) {
   this.toppings = toppings;
+  this.crustSize = crustSize;
 }
 
-Pizza.prototype.price = function() {
-
+Pizza.prototype.getPrice = function() {
+  var defaultPrice = 10.00;
+  if (this.crustSize === "personal") {
+    return defaultPrice -1;
+  } else if (this.crustSize === "small") {
+    return defaultPrice +2;
+  } else if (this.crustSize === "medium") {
+    return defaultPrice +4;
+  } else if (this.crustSize === "large") {
+    return defaultPrice +6;
+  } else if (this.crustSize === "extra-large"){
+    return defaultPrice +8;
+  }
+  console.log(defaultPrice);
 }
 
 
@@ -22,8 +34,8 @@ $(document).ready(function(){
   var pizzaOne = new Pizza();
   var pizzaTwo = new Pizza();
 
-var inputtedPizzaSize = $ ("input#")
-var inputtedPizzaToppings = $
+// var inputtedPizzaSize = $ ("input#")
+// var inputtedPizzaToppings = $
 
 })
 });
