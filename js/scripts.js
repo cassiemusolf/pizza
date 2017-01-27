@@ -5,7 +5,7 @@ function Pizza(toppings, crustSize) {
   this.crustSize = crustSize;
 }
 
-Pizza.prototype.getPrice = function() {
+Pizza.prototype.price = function() {
   var defaultPrice = 10.00;
   if (this.crustSize === "personal") {
     return defaultPrice -1;
@@ -18,7 +18,9 @@ Pizza.prototype.getPrice = function() {
   } else if (this.crustSize === "extra-large"){
     return defaultPrice +8;
   }
-  console.log(defaultPrice);
+  if (this.toppings === 1) {
+    return defaultPrice +1;
+  }
 }
 
 
@@ -31,11 +33,21 @@ Pizza.prototype.getPrice = function() {
 $(document).ready(function(){
   $("form#createPizza").submit(function(event){
     event.preventDefault();
-  var pizzaOne = new Pizza();
-  var pizzaTwo = new Pizza();
+  // var pizzaTwo = new Pizza(toppings, crustSize);
 
 // var inputtedPizzaSize = $ ("input#")
 // var inputtedPizzaToppings = $
+var crustSize = $(('input[name="size"]:checked')).val();
+var toppings =$(('input:checkbox[name="toppings"]:checked')).val();
+var pizzaOne = new Pizza(toppings, crustSize);
+//
+// var toppingList = [];
+// $('input:checkbox[name="toppings"]:checked').each(function() {
+//   0 + $(this).val();
+//   console.log(('input:checkbox[name="toppings"]:checked'));
+// });
 
-})
+
+$("span#finalPrice").text("Your total is: $" + pizzaOne.price() + ".00");
+});
 });
