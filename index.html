@@ -11,9 +11,9 @@
 <body>
   <div class="container">
     <div class="jumbotron">
-      <h1>Cassie's Pizzeria</h1>
+      <h1>Cassie's Pizza Delivery</h1>
     </div>
-    <form>
+    <form id = "createPizza">
       <div class="form-group">
         <label for="customerName">Please Enter Your Name:</label>
         <input id="customerName" class="form-control" type="text">
@@ -23,14 +23,22 @@
         <input id="customerAddress" class="form-control" type="text">
       </div>
     <button type=submit name=button class="btn btn-primary">Submit!</button>
-      <div class="pizzaSize">
+    <div class="row">
+      <div class="pizzaSize col-md-6">
         <h2>Choose a Pizza Size:</h2>
+        <input type="radio" name="size" value="personal">Personal<br>
+        <input type="radio" name="size" value="small">Small (10 inch)<br>
+        <input type="radio" name="size" value="medium">Medium (12 inch)<br>
+        <input type="radio" name="size" value="large">Large (14 inch)<br>
+        <input type="radio" name="size" value="extra large">Extra-Large (16 inch)<br>
         <button type="submit" name="button" class="btn btn-primary">Choose your size!</button>
       </div>
-      <div class="pizzaToppings">
+      <div class="pizzaToppings col-md-6">
         <h2>Choose Your Pizza Toppings: ($1.00 each)</h2>
         <button type="submit" name="button" class="btn btn-primary">Finished!</button>
       </div>
+    </div>
+    </form>
     </div>
 
   </body>
