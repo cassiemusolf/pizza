@@ -41,13 +41,17 @@ $(document).ready(function(){
     var crustSize = $(('input[name="size"]:checked')).val();
     var pizzaOne = new Pizza(toppings, crustSize);
     toppings = $('input[name=toppings]:checked').val();
-    var totalToppings = [];
-    $(':checkbox:checked.pizzaToppings').each(function() {
-      total += +this.value;
-      alert("hi");
+    // var totalToppings = [];
+    // $(':checkbox:checked.pizzaToppings').each(function() {
+    //   total += +this.value;
+    //   alert("hi");
+    // });
+    var checkboxArray = [];
+    $(".pizzaToppings:checked").each(function(){
+      checkboxArray.push(this.value);
     });
 
     $("span#name").text(nameInput + ", ");
-    $("span#finalPrice").text("Your total is: $" + pizzaOne.price() + ".00");
+    $("span#finalPrice").text("Your total is: $" + pizzaOne.price() + ".00" + checkboxArray);
   });
 });
