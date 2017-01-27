@@ -30,7 +30,6 @@
           <h2>How Would You Like to Receive Your Pizza?</h2>
           <input type="radio" name="getYourPizza" value="delivery">Delivery<br>
           <input type="radio" name="getYourPizza" value="pick-up">Store Pick-Up<br>
-          <button type=submit name=button class="btn btn-primary">Submit!</button>
         </div>
       </div>
     </form>
@@ -43,25 +42,25 @@
           <input type="radio" name="size" value="medium">Medium -- 12 inch ($14.00)<br>
           <input type="radio" name="size" value="large">Large -- 14 inch ($16.00)<br>
           <input type="radio" name="size" value="extra-large">Extra Large -- 16 inch ($18.00)<br>
-          <!-- <button type="submit" name="button" class="btn btn-primary">Choose your size!</button> -->
         </div>
         <div class="pizzaToppings col-md-6">
           <h2>Choose Your Pizza Toppings: ($1.00 each)</h2>
-          <input type="checkbox" name="toppings" value="1" onclick="addToppings()">Roasted Garlic<br>
-          <input type="checkbox" name="toppings" value="1" onclick="addToppings()">Spinach<br>
-          <input type="checkbox" name="toppings" value="1" onclick="addToppings()">Bell Peppers<br>
-          <input type="checkbox" name="toppings" value="1" onclick="addToppings()">Extra Cheese<br>
-          <input type="checkbox" name="toppings" value="1" onclick="addToppings()">Pineapple<br>
-          <input type="checkbox" name="toppings" value="1" onclick="addToppings()">Jalapenos<br>
-          <input type="checkbox" name="toppings" value="1" onclick="addToppings()">Sun Dried Tomatoes<br>
-          <input type="checkbox" name="toppings" value="1" onclick="addToppings()">Mushrooms<br>
-          <input type="checkbox" name="toppings" value="1" onclick="addToppings()">Olives<br>
-          <input type="checkbox" name="toppings" value="1" onclick="addToppings()">Onions<br>
-          <button type="submit" name="button" class="btn btn-primary">Finished!</button>
+          <input type="checkbox" name="toppings" value="1">Pineapple<br>
+          <input type="checkbox" name="toppings" value="1">Spinach<br>
+          <input type="checkbox" name="toppings" value="1">Roasted Red Peppers<br>
+          <input type="checkbox" name="toppings" value="1">Sun-Dried Tomatoes<br>
+          <input type="checkbox" name="toppings" value="1">Mushrooms<br>
+          <input type="checkbox" name="toppings" value="1">Jalapenos<br>
+          <input type="checkbox" name="toppings" value="1">Onions<br>
+          <input type="checkbox" name="toppings" value="1">Roasted Garlic<br>
+          <input type="checkbox" name="toppings" value="1">Extra Cheese<br>
+          <input type="checkbox" name="toppings" value="1">Olives<br>
+          <button type="submit" name="button" class="btn btn-primary">Submit Your Order!</button>
         </div>
+      </form>
       </div>
-    </form>
-    <h3><span id="finalPrice"></span></h3>
+
+    <h3><span id="name"></span><span id="finalPrice"></span></h3>
   </div>
 </body>
 </html>
