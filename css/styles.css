@@ -28,7 +28,7 @@ input[type="radio"], input[type="checkbox"] {
   font-size: 30px;
 }
 
-.pizzaToppings, .pizzaSize, .deliverOrPickup {
+.pizzaToppings, .pizzaSize, .deliverOrPickup, .customerInfo {
   font-size: 20px;
 }
 
@@ -42,7 +42,10 @@ h2 {
 }
 
 .customerInfo {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  color: purple;
+  font-weight: lighter;
 }
 
 h3 {

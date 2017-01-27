@@ -42,7 +42,15 @@ $(document).ready(function() {
     var crustSize = $(('input[name="size"]:checked')).val();
     var yourPizza = new Pizza(toppings, crustSize);
 
-    if (receivePizza === "delivery") {
+    if (nameInput === "") {
+      alert("Please enter your information!")
+    } if (addressInput === "") {
+      alert("Please enter your information!");
+    } else if (receivePizza === "") {
+      alert("Choose delievery or pick-up!");
+    } else if (crustSize === "") {
+      alert("Choose a pizza size!");
+    } else if (receivePizza === "delivery") {
       $("span#delivery").show();
       $("span#address").text(addressInput);
     } else if (receivePizza === "pick-up") {
