@@ -27,7 +27,7 @@
             <input id="customerAddress" class="form-control" type="text">
           </div>
         </div>
-        <div class=" deliverOrPickup col-md-6">
+        <div class="deliverOrPickup col-md-6">
           <h2>How Would You Like to Receive Your Pizza?</h2>
           <input type="radio" name="getYourPizza" value="delivery">Delivery<br>
           <input type="radio" name="getYourPizza" value="pick-up">Store Pick-Up<br>
@@ -36,14 +36,16 @@
       <div class="buildPizza row">
         <div class="form-group pizzaSize col-md-6">
           <h2>Choose a Pizza Size:</h2>
-          <input type="radio" name="size" value="personal">Personal -- 8 inch ($9.00)<br>
-          <input type="radio" name="size" value="small">Small -- 10 inch ($12.00)<br>
-          <input type="radio" name="size" value="medium">Medium -- 12 inch ($14.00)<br>
-          <input type="radio" name="size" value="large">Large -- 14 inch ($16.00)<br>
-          <input type="radio" name="size" value="extra-large">Extra Large -- 16 inch ($18.00)<br>
+          <input type="radio" name="size" value="personal">Personal -- 8 inch<br>
+          <input type="radio" name="size" value="small">Small -- 10 inch<br>
+          <input type="radio" name="size" value="medium">Medium -- 12 inch<br>
+          <input type="radio" name="size" value="large">Large -- 14 inch<br>
+          <input type="radio" name="size" value="extra-large">Extra Large -- 16 inch<br>
+          <img src="img/pizza.jpg">
         </div>
         <div class="form-group pizzaToppings col-md-6">
           <h2>Choose Your Pizza Toppings: ($1.00 each)</h2>
+          <form class="checks">
           <input type="checkbox" name="toppings" value="pineapple">Pineapple<br>
           <input type="checkbox" name="toppings" value="1">Spinach<br>
           <input type="checkbox" name="toppings" value="1">Roasted Red Peppers<br>
@@ -54,16 +56,17 @@
           <input type="checkbox" name="toppings" value="1">Roasted Garlic<br>
           <input type="checkbox" name="toppings" value="1">Extra Cheese<br>
           <input type="checkbox" name="toppings" value="1">Olives<br>
-          <button type="submit" name="button" class="btn btn-primary">Submit Your Order!</button>
+          <button type="submit" id="hide" name="button" class="btn btn-primary">Submit Your Order!</button>
           <input type="reset" class="btn btn-primary" onClick="window.location.reload()" value="Start again!">
+        </form>
         </div>
       </form>
       </div>
     <div class="results">
       <h3><span id="name"></span><span id="finalPrice"></span></h3>
       <h2><span id=reviewOrder>Review your order: Your toppings are</span></h2>
-      <span id="delivery">Your pizza will be delivered to <span id="address"></span> in 45 minutes!</span>
-      <span id="pick-up">You can pick up your pizza in 30 minutes!</span>
+      <span id="delivery">Your pizza will be delivered to <span id="address"></span> in 45 minutes!!!</span>
+      <span id="pick-up">You can pick up your pizza in 30 minutes!!!</span>
     </div>
   </div>
 </body>

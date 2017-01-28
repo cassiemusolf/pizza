@@ -5,10 +5,26 @@ function Pizza(toppings, crustSize) {
   this.crustSize = crustSize;
 }
 
+// var listToppings = [];
+
+// function countCheckboxes(formname, groupname){
+//    var totalChecked= 0;
+//    var max = checks.ckbox.length;
+
+//    for (var index = 0; index < max; index++) {
+//       if (eval("document." + checks + "." + toppings + "[" + index + "].checked") == TRUE) {
+//       totalChecked+= 1;
+//    }
+// }
+//
+//   return totalChecked;
+//   console.log(totalChecked);
+// }
+
 Pizza.prototype.price = function() {
   var defaultPrice = 10.00;
-  if (this.crustSize === "personal" ) {
-    return defaultPrice -1;
+  if (this.crustSize === "personal") {
+    return defaultPrice;
   } else if (this.crustSize === "small") {
     return defaultPrice +2;
   } else if (this.crustSize === "medium") {
@@ -20,14 +36,12 @@ Pizza.prototype.price = function() {
   }
 }
 
-  // Pizza.prototype.calculateToppings = function () {
-  //   if (this.toppings === "pineapple") {
-  //     alert("finally");
-  //   } else if (this.toppings === 2) {
-  //     return defaultToppings +2;
-  //   }
-  // };
-
+Pizza.prototype.priceToppings = function() {
+  var defaultToppings = 0;
+  if (this.toppings === 1) {
+    alert("add 1");
+  }
+}
 
 //front-end logic
 
@@ -35,7 +49,7 @@ $(document).ready(function() {
   $("form#all").submit(function(event) {
     event.preventDefault();
 
-    var toppings = $('input:checkbox[name="toppings"]:checked').val();
+    var toppings = $('input:checkbox[name="toppings"]:checked').length;
     var receivePizza = $(('input[name="getYourPizza"]:checked')).val();
     var nameInput = $("input#customerName").val();
     var addressInput = $("input#customerAddress").val();
@@ -43,21 +57,34 @@ $(document).ready(function() {
     var yourPizza = new Pizza(toppings, crustSize);
 
     if (nameInput === "") {
-      alert("Please enter your information!")
+      alert("Please enter your information!");
     } if (addressInput === "") {
       alert("Please enter your information!");
-    } else if (receivePizza === "") {
-      alert("Choose delievery or pick-up!");
-    } else if (crustSize === "") {
-      alert("Choose a pizza size!");
     } else if (receivePizza === "delivery") {
       $("span#delivery").show();
       $("span#address").text(addressInput);
-    } else if (receivePizza === "pick-up") {
+    }  else if (receivePizza === "pick-up") {
       $("span#pick-up").show();
     }
 
-    $("span#name").text(nameInput + ", ");
-    $("span#finalPrice").text("Your total is: $" + yourPizza.price() + ".00");
-  });
+  //
+  // $(":input").each(function() {
+  //   if($(this).val() === "")
+  //   alert("Empty Fields!!");
+  // });
+
+
+      $("span#name").text(nameInput + ", ");
+      $("span#finalPrice").text("Your total is: $" + yourPizza.price() + ".00");
+    });
 });
+
+    // function checkboxes () {
+    //   count = 0;
+    // for (var i=0; i<toppings.length; i++) {
+    //    if (toppings[i].type == "checkbox" && toppings[i].checked == true)
+    //       count++;
+    //    }
+    // }
+    //  var count = checkboxes(toppings);
+    //  alert(toppings);
